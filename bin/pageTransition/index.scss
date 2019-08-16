@@ -1,0 +1,38 @@
+#xl-page-transition-action-box{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  &.action{
+    .xl-page-transition-left-pre,.xl-page-transition-left-next{
+      transition: all .25s ease-out;
+      transform: translateX(-100%);
+    }
+    .xl-page-transition-right-pre,.xl-page-transition-right-next{
+      transition: all .25s ease-out;
+      transform: translateX(100%);
+    }
+  }
+  .xl-page-transition{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    &.xl-page-transition-left-pre{
+      left: 0;
+    }
+    &.xl-page-transition-left-next{
+      left: 100%;
+    }
+
+    &.xl-page-transition-right-pre{
+      left: 0;
+    }
+    &.xl-page-transition-right-next{
+      right: 100%;
+    }
+  }
+
+}
